@@ -1,0 +1,11 @@
+<h1>Yo</h1>
+<% @user.each do |e| %>
+  <%= e.prenom %><br />
+  <%= e.id %><br />
+  <%= button_to "Edit", edit_user_path(e.id), :class => "btn btn-danger", method: :get %>
+  <%= button_to "voir", user_path(e.id), :class => "btn btn-danger", method: :get %>
+  <%= button_to "Supprimer", user_path(e.id), :class => "btn btn-danger", :method => :delete %>
+<% end %><br />
+
+<%= link_to "New user", new_path, method: :post %>
+
